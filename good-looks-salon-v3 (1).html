@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Salon in Janakpuri | Bridal Makeup & Hair Styling | Good Looks Salon</title>
+<meta name="description" content="Premium salon in Janakpuri offering bridal makeup, hairstyling, skin treatments & grooming services. Book your appointment today.">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BeautySalon","name":"Good Looks Salon","address":{"@type":"PostalAddress","streetAddress":"79A, Block C4G, Janakpuri","addressLocality":"New Delhi","postalCode":"110058","addressCountry":"IN"},"telephone":"+91-9136205669","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"328"}}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --ink:#0C0F0E;
+  --deep:#0E1512;
+  --emerald:#1B4332;
+  --gold:#C9A84C;
+  --gold-light:#E8C97A;
+  --gold-pale:#F5E6C0;
+  --g-gold:linear-gradient(135deg,#C9A84C,#E8C97A,#C9A84C);
+  --g-emerald:linear-gradient(135deg,#1B4332,#2D6A4F);
+  --border:rgba(201,168,76,0.2);
+}
+
+/* ── BASE ── */
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:#fff;font-family:'Jost',sans-serif;overflow-x:hidden;cursor:none}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.025;pointer-events:none;z-index:9998}
+
+/* ── CURSOR ── */
+.cur{width:10px;height:10px;background:var(--gold);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:99999}
+.cur-ring{width:34px;height:34px;border:1px solid rgba(201,168,76,.4);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:99998;transition:all .15s ease}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--ink)}
+::-webkit-scrollbar-thumb{background:var(--g-gold)}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:26px 70px;display:flex;align-items:center;justify-content:space-between;transition:all .5s}
+nav.sc{background:rgba(12,15,14,.97);padding:14px 70px;border-bottom:1px solid var(--border);backdrop-filter:blur(20px)}
+.logo-wrap{display:flex;align-items:center;gap:10px}
+.logo-img{height:40px;object-fit:contain;filter:brightness(0) invert(1)}
+.logo-text{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;letter-spacing:3px;text-transform:uppercase;background:var(--g-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:36px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.55);text-decoration:none;font-size:11px;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:color .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-5px;left:0;right:0;height:1px;background:var(--g-gold);transform:scaleX(0);transition:transform .4s}
+.nav-links a:hover{color:var(--gold-light)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-book{padding:11px 28px;background:transparent;border:1px solid var(--gold);color:var(--gold);font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:none;transition:all .4s;position:relative;overflow:hidden}
+.nav-book::before{content:'';position:absolute;inset:0;background:var(--g-gold);transform:translateX(-101%);transition:transform .4s;z-index:-1}
+.nav-book:hover{color:var(--ink)}
+.nav-book:hover::before{transform:translateX(0)}
+
+/* ── HERO ── */
+#hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}
+.hero-slides{position:absolute;inset:0}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.5s ease}
+.hero-slide.on{opacity:1}
+.hero-slide img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-slide video{width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,15,14,.85) 40%,rgba(12,15,14,.3) 100%)}
+.hero-overlay2{position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,15,14,.6) 0%,transparent 50%)}
+
+canvas#pc{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+
+.geo{position:absolute;right:0;top:0;bottom:0;width:45%;overflow:hidden;pointer-events:none;z-index:1}
+.geo-c{position:absolute;border-radius:50%;border:1px solid rgba(201,168,76,.06);top:50%;right:-80px;transform:translateY(-50%)}
+.gc1{width:560px;height:560px;animation:gs 40s linear infinite}
+.gc2{width:370px;height:370px;animation:gs 28s linear infinite reverse;border-color:rgba(201,168,76,.1)}
+.gc3{width:180px;height:180px;animation:gs 20s linear infinite;border-color:rgba(201,168,76,.18)}
+@keyframes gs{to{transform:translateY(-50%) rotate(360deg)}}
+
+.hero-content{position:relative;z-index:10;padding:0 70px;max-width:750px}
+.h-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:32px;animation:fadeUp 1s ease .2s both}
+.h-line{width:36px;height:1px;background:var(--g-gold)}
+.h-et{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:400}
+h1.hh{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,7vw,96px);font-weight:300;line-height:1.0;margin-bottom:24px;animation:fadeUp 1s ease .4s both}
+h1.hh em{font-style:italic;color:rgba(255,255,255,.8)}
+h1.hh .gw{font-style:italic;font-weight:600;background:var(--g-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block}
+.h-sub{font-size:14px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.9;max-width:460px;margin-bottom:44px;animation:fadeUp 1s ease .6s both}
+.h-btns{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp 1s ease .8s both}
+.btn-gold{display:inline-flex;align-items:center;gap:10px;padding:16px 38px;background:var(--g-gold);border:none;color:var(--ink);font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:none;transition:all .4s;box-shadow:0 8px 40px rgba(201,168,76,.3);position:relative;overflow:hidden}
+.btn-gold::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.15);transform:translateX(-101%);transition:transform .4s}
+.btn-gold:hover{box-shadow:0 16px 60px rgba(201,168,76,.5);transform:translateY(-2px)}
+.btn-gold:hover::after{transform:translateX(0)}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;padding:16px 38px;background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.65);font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:2px;text-transform:uppercase;cursor:none;transition:all .4s}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* Slide dots */
+.slide-dots{position:absolute;bottom:40px;left:70px;display:flex;gap:10px;z-index:10}
+.sd{width:24px;height:2px;background:rgba(255,255,255,.2);cursor:none;transition:all .4s}
+.sd.on{width:40px;background:var(--g-gold)}
+
+/* Hero stats */
+.h-stats{display:flex;gap:0;margin-top:60px;border-top:1px solid rgba(201,168,76,.12);padding-top:36px;animation:fadeUp 1s ease 1s both}
+.hs{flex:1;padding-right:36px;border-right:1px solid rgba(201,168,76,.1)}
+.hs:last-child{border:none;padding-right:0;padding-left:36px}
+.hs:not(:first-child):not(:last-child){padding-left:36px}
+.hs-n{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;background:var(--g-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
+.hs-l{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:6px}
+
+/* scroll */
+.scr-ind{position:absolute;bottom:40px;right:70px;display:flex;flex-direction:column;align-items:center;gap:10px;z-index:10;animation:fadeUp 1s ease 1.2s both}
+.scr-ind span{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.scr-t{width:1px;height:56px;background:rgba(201,168,76,.15);position:relative;overflow:hidden}
+.scr-f{position:absolute;top:0;width:100%;background:var(--g-gold);animation:sf 2s ease-in-out infinite}
+@keyframes sf{0%{height:0;top:0}50%{height:100%;top:0}100%{height:0;top:100%}}
+
+/* ── SECTION BASE ── */
+section{padding:110px 70px}
+.s-tag{display:inline-flex;align-items:center;gap:12px;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.s-tag::before,.s-tag::after{content:'';width:22px;height:1px;background:var(--g-gold)}
+.s-head{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4.5vw,56px);font-weight:300;line-height:1.1;margin-bottom:18px}
+.s-head em{font-style:italic;background:var(--g-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+
+/* ── LOGO BANNER ── */
+#logo-banner{padding:0;background:var(--deep);border-top:1px solid rgba(201,168,76,.1);border-bottom:1px solid rgba(201,168,76,.1)}
+.logo-banner-inner{display:flex;align-items:center;justify-content:center;padding:28px;gap:20px;flex-wrap:wrap}
+.logo-banner-inner img{height:50px;object-fit:contain;filter:brightness(0) invert(1);opacity:.7;transition:opacity .3s}
+.logo-banner-inner img:hover{opacity:1}
+.logo-divider{width:1px;height:40px;background:rgba(201,168,76,.2)}
+
+/* ── ABOUT ── */
+#about{background:var(--deep);position:relative;overflow:hidden}
+#about::before{content:'EXCELLENCE';position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:'Cormorant Garamond',serif;font-size:180px;font-weight:700;color:rgba(27,67,50,.15);white-space:nowrap;pointer-events:none;letter-spacing:-5px}
+.about-wrap{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.about-img-col{position:relative}
+.about-main-img{width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid rgba(201,168,76,.15);display:block}
+.about-thumb-row{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px}
+.about-thumb{width:100%;aspect-ratio:1;object-fit:cover;border:1px solid rgba(201,168,76,.1);transition:opacity .3s}
+.about-thumb:hover{opacity:.85}
+.ac{position:absolute;width:36px;height:36px;border-color:var(--gold);border-style:solid}
+.ac.tl{top:-1px;left:-1px;border-width:2px 0 0 2px}
+.ac.tr{top:-1px;right:-1px;border-width:2px 2px 0 0}
+.ac.bl{bottom:-1px;left:-1px;border-width:0 0 2px 2px}
+.ac.br{bottom:-1px;right:-1px;border-width:0 2px 2px 0}
+.about-ribbon{position:absolute;bottom:8px;right:-22px;background:var(--g-gold);padding:18px 22px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.ar-n{display:block;font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--ink);line-height:1}
+.ar-s{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--ink);opacity:.7}
+.about-p{font-size:15px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.95;margin-bottom:16px}
+.about-pills{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+.pill{padding:7px 16px;border:1px solid rgba(201,168,76,.2);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.5);transition:all .3s}
+.pill:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ── GALLERY STRIP (Hero Gallery) ── */
+#gallery-strip{padding:0;background:var(--ink);overflow:hidden}
+.gs-img{width:100%;height:420px;object-fit:cover;display:block}
+
+/* ── SERVICES ── */
+#services{background:var(--ink)}
+.svc-wrap{max-width:1260px;margin:0 auto}
+.svc-top{text-align:center;margin-bottom:60px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,.1)}
+.svc-card{background:var(--ink);padding:44px 32px;position:relative;overflow:hidden;cursor:none;transition:background .4s}
+.svc-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(27,67,50,.4),rgba(201,168,76,.04));opacity:0;transition:opacity .4s}
+.svc-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--g-gold);transform:scaleX(0);transition:transform .5s;transform-origin:left}
+.svc-card:hover{background:rgba(14,21,18,.95)}
+.svc-card:hover::before{opacity:1}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-num{position:absolute;top:20px;right:24px;font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:700;color:rgba(201,168,76,.06);line-height:1}
+.svc-icon-img{width:64px;height:64px;object-fit:cover;border:1px solid rgba(201,168,76,.15);margin-bottom:20px;transition:transform .4s}
+.svc-card:hover .svc-icon-img{transform:scale(1.08)}
+.svc-icon{width:64px;height:64px;font-size:28px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(27,67,50,.6),rgba(201,168,76,.08));border:1px solid rgba(201,168,76,.15);margin-bottom:20px;transition:transform .4s}
+.svc-card:hover .svc-icon{transform:scale(1.1) rotate(-4deg)}
+.svc-card h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;margin-bottom:10px}
+.svc-card p{font-size:13px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.75;margin-bottom:20px}
+.svc-price{font-size:11px;letter-spacing:1.5px;color:var(--gold);margin-bottom:18px}
+.svc-link{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);background:none;border:none;cursor:none;transition:all .3s}
+.svc-link .arr{transition:transform .3s}
+.svc-card:hover .svc-link{color:var(--gold)}
+.svc-card:hover .arr{transform:translateX(6px)}
+
+/* ── PORTFOLIO (real photos) ── */
+#portfolio{background:var(--deep);padding:110px 0}
+.port-wrap{max-width:1260px;margin:0 auto;padding:0 70px}
+.port-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;flex-wrap:wrap;gap:20px}
+.port-filters{display:flex;gap:8px;flex-wrap:wrap}
+.pf-btn{padding:8px 20px;background:transparent;border:1px solid rgba(201,168,76,.15);color:rgba(255,255,255,.4);font-family:'Jost',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;cursor:none;transition:all .3s}
+.pf-btn.on,.pf-btn:hover{background:var(--g-gold);border-color:transparent;color:var(--ink);font-weight:600}
+
+/* Masonry grid */
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.port-item{position:relative;overflow:hidden;cursor:none}
+.port-item:nth-child(1){grid-row:span 2}
+.port-item:nth-child(4){grid-column:span 2}
+.port-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.25,.46,.45,.94)}
+.port-item:nth-child(1) .port-img{aspect-ratio:.65;height:auto;min-height:400px}
+.port-item:not(:nth-child(1)):not(:nth-child(4)) .port-img{aspect-ratio:1}
+.port-item:nth-child(4) .port-img{aspect-ratio:2;height:auto}
+.port-item:hover .port-img{transform:scale(1.06)}
+.port-ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,15,14,.92) 0%,rgba(12,15,14,.2) 40%,transparent 70%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px;opacity:0;transition:opacity .5s}
+.port-item:hover .port-ov{opacity:1}
+.port-ov h4{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;margin-bottom:4px}
+.port-ov span{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold)}
+
+/* ── REELS / VIDEO SECTION ── */
+#reels{background:var(--ink);padding:110px 70px}
+.reels-wrap{max-width:1260px;margin:0 auto}
+.reels-top{text-align:center;margin-bottom:60px}
+.reels-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.reel-item{position:relative;cursor:none;overflow:hidden;border:1px solid rgba(201,168,76,.1);transition:border-color .3s}
+.reel-item:hover{border-color:rgba(201,168,76,.4)}
+.reel-item video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block}
+.reel-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(12,15,14,.3);transition:background .3s}
+.reel-item:hover .reel-play{background:rgba(12,15,14,.1)}
+.rp-btn{width:52px;height:52px;background:var(--g-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;transition:transform .3s;color:var(--ink);border:none;cursor:none}
+.reel-item:hover .rp-btn{transform:scale(1.1)}
+.reel-label{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(0deg,rgba(12,15,14,.9),transparent);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.8)}
+
+/* ── GALLERY MOSAIC (heroGallery) ── */
+#gallery-full{background:var(--deep);padding:110px 70px}
+.gf-wrap{max-width:1260px;margin:0 auto}
+.gf-top{text-align:center;margin-bottom:50px}
+.gf-mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:4px}
+.gf-item{overflow:hidden;position:relative;cursor:none}
+.gf-item.wide{grid-column:span 2}
+.gf-item.tall{grid-row:span 2}
+.gf-item.big{grid-column:span 2;grid-row:span 2}
+.gf-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.gf-item:hover img{transform:scale(1.07)}
+.gf-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,15,14,.7),transparent 50%);opacity:0;transition:opacity .4s}
+.gf-item:hover .gf-overlay{opacity:1}
+
+/* ── TESTIMONIALS ── */
+#testimonials{background:var(--ink)}
+.test-wrap{max-width:1260px;margin:0 auto}
+.test-top{text-align:center;margin-bottom:60px}
+.test-layout{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start}
+.t-big{font-family:'Cormorant Garamond',serif;font-size:96px;font-weight:600;line-height:1;background:var(--g-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.t-stars{color:var(--gold);font-size:20px;letter-spacing:4px;margin:6px 0}
+.t-total{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.t-bars{margin-top:30px}
+.t-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.tbl{font-size:10px;color:rgba(255,255,255,.4);width:24px;text-align:right}
+.tbt{flex:1;height:3px;background:rgba(255,255,255,.07);overflow:hidden}
+.tbf{height:100%;background:var(--g-gold)}
+.tbc{font-size:10px;color:rgba(255,255,255,.35);width:24px}
+.test-card{background:rgba(255,255,255,.02);border:1px solid rgba(201,168,76,.1);border-left:2px solid;border-image:var(--g-gold) 1;padding:40px;display:none}
+.test-card.on{display:block;animation:fadeUp .5s ease}
+.tq{font-family:'Cormorant Garamond',serif;font-size:72px;line-height:.8;color:rgba(201,168,76,.12);position:absolute;top:16px;left:24px}
+.tc-body{position:relative}
+.tc-text{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;font-weight:300;color:rgba(255,255,255,.75);line-height:1.8;margin-bottom:28px}
+.tc-author{display:flex;align-items:center;gap:14px}
+.tc-av{width:48px;height:48px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,.3)}
+.tc-av-em{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#1B4332,#2D6A4F);border:1px solid rgba(201,168,76,.3);display:flex;align-items:center;justify-content:center;font-size:20px}
+.tc-name{font-size:14px;font-weight:500;margin-bottom:2px}
+.tc-role{font-size:10px;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase}
+.test-nav{display:flex;gap:10px;margin-top:24px}
+.tn{width:40px;height:40px;background:transparent;border:1px solid rgba(201,168,76,.2);color:rgba(255,255,255,.5);font-size:15px;cursor:none;transition:all .3s;display:flex;align-items:center;justify-content:center}
+.tn:hover{background:var(--g-gold);border-color:transparent;color:var(--ink)}
+.t-dots{display:flex;gap:8px;margin-top:14px}
+.tdot{width:22px;height:2px;background:rgba(201,168,76,.2);cursor:none;transition:all .3s}
+.tdot.on{width:38px;background:var(--g-gold)}
+
+/* ── OFFERS ── */
+#offers{background:var(--deep)}
+.offers-wrap{max-width:1260px;margin:0 auto}
+.offers-top{text-align:center;margin-bottom:60px}
+.offers-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:20px}
+.offer-big{background:linear-gradient(135deg,#1B4332 0%,#0E1512 100%);border:1px solid rgba(201,168,76,.2);padding:52px;position:relative;overflow:hidden}
+.offer-big::before{content:'';position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.1),transparent 70%);right:-70px;top:-70px;pointer-events:none}
+.offer-side{display:flex;flex-direction:column;gap:20px}
+.offer-sm{background:rgba(27,67,50,.12);border:1px solid rgba(201,168,76,.1);padding:30px;flex:1;cursor:none;transition:all .4s}
+.offer-sm:hover{border-color:rgba(201,168,76,.3);background:rgba(27,67,50,.25)}
+.ob{display:inline-block;padding:5px 12px;background:var(--g-gold);font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--ink);margin-bottom:16px;animation:pulse 2.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,.4)}50%{box-shadow:0 0 0 10px rgba(201,168,76,0)}}
+.od{font-family:'Cormorant Garamond',serif;font-size:66px;font-weight:700;line-height:1;background:var(--g-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.offer-big h3,.offer-sm h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;margin:10px 0 10px}
+.offer-big p,.offer-sm p{font-size:13px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:16px}
+.offer-sm .od{font-size:38px}
+.timer-row{display:flex;gap:10px;margin:16px 0 24px}
+.tu{text-align:center;background:rgba(0,0,0,.3);border:1px solid rgba(201,168,76,.15);padding:10px 14px;min-width:58px}
+.tn-n{display:block;font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--gold-light);line-height:1}
+.tn-l{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3)}
+
+/* ── BLOG ── */
+#blog{background:var(--ink)}
+.blog-wrap{max-width:1260px;margin:0 auto}
+.blog-top{text-align:center;margin-bottom:60px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,.08)}
+.blog-card{background:var(--ink);overflow:hidden;cursor:none;transition:background .4s}
+.blog-card:hover{background:rgba(14,21,18,.9)}
+.blog-img-wrap{height:210px;overflow:hidden;position:relative}
+.blog-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease}
+.blog-card:hover .blog-img-wrap img{transform:scale(1.06)}
+.blog-img-overlay{position:absolute;inset:0;background:linear-gradient(0deg,var(--ink) 0%,transparent 40%)}
+.blog-body{padding:26px 30px}
+.blog-cat{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.blog-card h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;line-height:1.35;margin-bottom:10px}
+.blog-card p{font-size:12px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.7}
+.blog-foot{display:flex;justify-content:space-between;margin-top:18px;padding-top:18px;border-top:1px solid rgba(201,168,76,.08);font-size:10px;color:rgba(255,255,255,.3);letter-spacing:1px}
+
+/* ── CONTACT ── */
+#contact{background:var(--deep);position:relative;overflow:hidden}
+#contact::after{content:'';position:absolute;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(27,67,50,.35),transparent 70%);bottom:-200px;left:-200px;pointer-events:none}
+.contact-wrap{max-width:1260px;margin:0 auto;position:relative;z-index:1}
+.contact-top{text-align:center;margin-bottom:70px}
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:80px}
+.c-info{display:flex;gap:18px;margin-bottom:28px}
+.c-icon{width:48px;height:48px;flex-shrink:0;background:linear-gradient(135deg,rgba(27,67,50,.5),rgba(201,168,76,.05));border:1px solid rgba(201,168,76,.15);display:flex;align-items:center;justify-content:center;font-size:18px}
+.c-info h4{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.c-info p{font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.7}
+.c-btns{display:flex;gap:10px;margin-top:32px;flex-wrap:wrap}
+.c-call{display:flex;align-items:center;gap:8px;padding:13px 26px;background:var(--g-emerald);border:1px solid rgba(201,168,76,.2);color:var(--gold-pale);font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;cursor:none;transition:all .4s}
+.c-call:hover{background:var(--g-gold);color:var(--ink);border-color:var(--gold)}
+.c-wa{display:flex;align-items:center;gap:8px;padding:13px 26px;background:#128C7E;border:none;color:white;font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;cursor:none;transition:all .4s}
+.c-wa:hover{background:#075E54;transform:translateY(-2px)}
+.map-box{margin-top:32px;height:170px;background:linear-gradient(135deg,#1B4332,#0E1512);border:1px solid rgba(201,168,76,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.map-box p{font-size:11px;letter-spacing:1px;color:rgba(255,255,255,.35)}
+.map-box a{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);text-decoration:none}
+.f-grp{margin-bottom:18px}
+.f-lbl{display:block;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:7px;font-weight:500}
+.f-in,.f-sel,.f-ta{width:100%;background:rgba(255,255,255,.03);border:1px solid rgba(201,168,76,.15);padding:13px 16px;color:white;font-family:'Jost',sans-serif;font-size:13px;font-weight:300;outline:none;transition:border .3s,box-shadow .3s;-webkit-appearance:none}
+.f-in:focus,.f-sel:focus,.f-ta:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.07)}
+.f-in::placeholder,.f-ta::placeholder{color:rgba(255,255,255,.2)}
+.f-sel option{background:#0E1512}
+.f-ta{height:90px;resize:none}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* ── FOOTER ── */
+footer{background:#070E0A;padding:66px 70px 28px;border-top:1px solid rgba(201,168,76,.1)}
+.ft-inner{max-width:1260px;margin:0 auto}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:54px}
+.ft-logo-img{height:38px;object-fit:contain;filter:brightness(0) invert(1);margin-bottom:6px;display:block}
+.ft-logo-text{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;letter-spacing:3px;text-transform:uppercase;background:var(--g-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.ft-brand p{font-size:13px;font-weight:300;color:rgba(255,255,255,.35);line-height:1.8;margin:14px 0 24px;max-width:280px}
+.ft-soc{display:flex;gap:10px;flex-wrap:wrap}
+.soc{width:42px;height:42px;background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.15);display:flex;align-items:center;justify-content:center;cursor:none;transition:all .35s;text-decoration:none;color:rgba(255,255,255,.6)}
+.soc:hover{transform:translateY(-3px);border-color:transparent}
+.soc-wa:hover{background:#25D366;color:#fff;box-shadow:0 8px 24px rgba(37,211,102,.35)}
+.soc-ig:hover{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;box-shadow:0 8px 24px rgba(220,39,67,.35)}
+.soc-fb:hover{background:#1877F2;color:#fff;box-shadow:0 8px 24px rgba(24,119,242,.35)}
+.soc-yt:hover{background:#FF0000;color:#fff;box-shadow:0 8px 24px rgba(255,0,0,.35)}
+.soc-tt:hover{background:#010101;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.soc-pin:hover{background:#E60023;color:#fff;box-shadow:0 8px 24px rgba(230,0,35,.35)}
+
+/* ── FOOTER SOCIAL FULL SECTION ── */
+.ft-social-section{
+  border-top:1px solid rgba(201,168,76,.12);
+  border-bottom:1px solid rgba(201,168,76,.12);
+  padding:48px 0;margin-bottom:54px;
+  text-align:center;
+}
+.ft-social-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-weight:400;letter-spacing:5px;
+  text-transform:uppercase;color:rgba(255,255,255,.3);
+  margin-bottom:32px;
+  display:flex;align-items:center;justify-content:center;gap:16px;
+}
+.ft-social-title::before,.ft-social-title::after{
+  content:'';flex:1;max-width:120px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,168,76,.3));
+}
+.ft-social-title::after{background:linear-gradient(90deg,rgba(201,168,76,.3),transparent)}
+.ft-social-cards{
+  display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
+}
+.ft-soc-card{
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  padding:20px 24px;min-width:100px;
+  background:rgba(255,255,255,.02);
+  border:1px solid rgba(201,168,76,.08);
+  text-decoration:none;cursor:none;
+  transition:all .4s;position:relative;overflow:hidden;
+}
+.ft-soc-card::before{
+  content:'';position:absolute;inset:0;
+  opacity:0;transition:opacity .4s;
+}
+.ft-soc-card:hover{transform:translateY(-4px);border-color:transparent}
+.ft-soc-card:hover::before{opacity:1}
+.ft-soc-card:hover .ft-soc-icon{transform:scale(1.15)}
+.ft-soc-card:hover .ft-soc-name{color:#fff}
+.ft-soc-wa::before{background:rgba(37,211,102,.12)}
+.ft-soc-wa:hover{box-shadow:0 12px 40px rgba(37,211,102,.2)}
+.ft-soc-ig::before{background:linear-gradient(135deg,rgba(240,148,51,.08),rgba(188,24,136,.12))}
+.ft-soc-ig:hover{box-shadow:0 12px 40px rgba(220,39,67,.2)}
+.ft-soc-fb::before{background:rgba(24,119,242,.1)}
+.ft-soc-fb:hover{box-shadow:0 12px 40px rgba(24,119,242,.2)}
+.ft-soc-yt::before{background:rgba(255,0,0,.08)}
+.ft-soc-yt:hover{box-shadow:0 12px 40px rgba(255,0,0,.2)}
+.ft-soc-tt::before{background:rgba(255,255,255,.04)}
+.ft-soc-tt:hover{box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.ft-soc-pin::before{background:rgba(230,0,35,.08)}
+.ft-soc-pin:hover{box-shadow:0 12px 40px rgba(230,0,35,.2)}
+.ft-soc-icon{
+  width:46px;height:46px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .4s;position:relative;z-index:1;
+}
+.ft-soc-wa .ft-soc-icon{background:rgba(37,211,102,.15);color:#25D366}
+.ft-soc-ig .ft-soc-icon{background:rgba(220,39,67,.12);color:#E1306C}
+.ft-soc-fb .ft-soc-icon{background:rgba(24,119,242,.12);color:#1877F2}
+.ft-soc-yt .ft-soc-icon{background:rgba(255,0,0,.12);color:#FF0000}
+.ft-soc-tt .ft-soc-icon{background:rgba(255,255,255,.06);color:rgba(255,255,255,.7)}
+.ft-soc-pin .ft-soc-icon{background:rgba(230,0,35,.1);color:#E60023}
+.ft-soc-name{
+  font-size:9px;letter-spacing:2px;text-transform:uppercase;
+  color:rgba(255,255,255,.4);transition:color .4s;
+  position:relative;z-index:1;font-weight:500;
+}
+.ft-soc-handle{
+  font-size:10px;color:rgba(255,255,255,.2);
+  position:relative;z-index:1;
+}
+.ft-col h4{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.ft-links{list-style:none}
+.ft-links li{margin-bottom:10px}
+.ft-links a{color:rgba(255,255,255,.35);text-decoration:none;font-size:13px;font-weight:300;transition:color .3s}
+.ft-links a:hover{color:var(--gold-light)}
+.ft-bot{border-top:1px solid rgba(255,255,255,.05);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:rgba(255,255,255,.25);letter-spacing:.5px;flex-wrap:wrap;gap:10px}
+.ft-bot a{color:var(--gold);text-decoration:none}
+
+/* ── STICKY MOBILE ── */
+.sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:rgba(7,14,10,.96);border-top:1px solid rgba(201,168,76,.2);padding:12px 20px;gap:8px;backdrop-filter:blur(20px)}
+
+/* ── MODAL ── */
+.m-bg{position:fixed;inset:0;background:rgba(0,0,0,.88);backdrop-filter:blur(12px);z-index:9999;display:none;align-items:center;justify-content:center;padding:20px}
+.m-bg.open{display:flex}
+.m-box{background:linear-gradient(160deg,#0E1512,#1B4332);border:1px solid rgba(201,168,76,.25);padding:48px;max-width:540px;width:100%;position:relative;animation:mIn .4s ease}
+@keyframes mIn{from{transform:scale(.92) translateY(20px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
+.mcl{position:absolute;top:18px;right:18px;background:none;border:none;color:rgba(255,255,255,.4);font-size:20px;cursor:none;transition:color .3s}
+.mcl:hover{color:white}
+.m-icon{font-size:50px;margin-bottom:14px}
+.m-box h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;margin-bottom:10px}
+.m-meta{display:flex;gap:12px;margin:12px 0 18px;flex-wrap:wrap}
+.m-meta span{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.2);padding:6px 12px}
+.m-box p{font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.85;margin-bottom:28px}
+
+
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s ease,transform .9s ease}
+.rl{opacity:0;transform:translateX(-40px);transition:opacity .9s ease,transform .9s ease}
+.rr{opacity:0;transform:translateX(40px);transition:opacity .9s ease,transform .9s ease}
+.vis{opacity:1 !important;transform:translate(0) !important}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  nav{padding:14px 20px}
+  nav.sc{padding:10px 20px}
+  .nav-links,.nav-book{display:none}
+  section{padding:70px 20px}
+  #portfolio{padding:70px 0}
+  .port-wrap{padding:0 20px}
+  #reels{padding:70px 20px}
+  #gallery-full{padding:70px 20px}
+  .about-wrap,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .svc-grid,.blog-grid{grid-template-columns:1fr}
+  .port-grid{grid-template-columns:1fr 1fr}
+  .port-item:nth-child(1){grid-row:auto}
+  .port-item:nth-child(4){grid-column:auto}
+  .offers-grid{grid-template-columns:1fr}
+  .test-layout{grid-template-columns:1fr;gap:36px}
+  .ft-top{grid-template-columns:1fr 1fr;gap:28px}
+  .h-stats{flex-wrap:wrap;gap:24px}
+  .hs{border:none;padding:0}
+  .sticky{display:flex}
+  .hero-content{padding:0 20px;padding-top:100px}
+  .reels-grid{grid-template-columns:1fr 1fr}
+  .gf-mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+  .gf-item.wide,.gf-item.big{grid-column:auto}
+  .f-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="curRing"></div>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="logo-wrap">
+    <img src="https://goodlooksalon.in/logo/logo.png" alt="Good Looks Salon Logo" class="logo-img" onerror="this.style.display='none'">
+    <img src="https://goodlooksalon.in/logo/goodlook.png" alt="Good Looks" class="logo-img" style="height:32px" onerror="this.style.display='none'">
+    <span class="logo-text" style="display:none" id="logoFallback">Good Looks</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#reels">Reels</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#offers">Offers</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-book" onclick="gotoContact()">Book Appointment</button>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <!-- Real hero images from goodlooksalon.in -->
+  <div class="hero-slides">
+    <div class="hero-slide on">
+      <img src="https://goodlooksalon.in/assets/img5.jpeg" alt="Good Looks Salon Bridal Makeup" onerror="this.parentElement.style.background='linear-gradient(135deg,#0E1512,#1B4332)'">
+    </div>
+    <div class="hero-slide">
+      <img src="https://goodlooksalon.in/about/img.jpeg" alt="Good Looks Salon Studio" onerror="this.parentElement.style.background='linear-gradient(135deg,#1B4332,#0C0F0E)'">
+    </div>
+    <div class="hero-slide">
+      <img src="https://goodlooksalon.in/assets/img6.jpeg" alt="Good Looks Salon Services" onerror="this.parentElement.style.background='linear-gradient(135deg,#0C0F0E,#1B4332)'">
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay2"></div>
+  <canvas id="pc"></canvas>
+
+  <div class="geo">
+    <div class="geo-c gc1"></div>
+    <div class="geo-c gc2"></div>
+    <div class="geo-c gc3"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="h-eyebrow">
+      <div class="h-line"></div>
+      <span class="h-et">Janakpuri's Premier Beauty Studio</span>
+      <div class="h-line"></div>
+    </div>
+    <h1 class="hh">
+      <em>Where Beauty</em>
+      <span class="gw">Meets Perfection</span>
+    </h1>
+    <p class="h-sub">Premium bridal makeup, hair styling & advanced skin treatments in New Delhi — crafted by artists who understand the art of transformation.</p>
+    <div class="h-btns">
+      <button class="btn-gold" onclick="gotoContact()">✦ Book Appointment</button>
+      <button class="btn-ghost" onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">View Portfolio →</button>
+    </div>
+    <div class="h-stats">
+      <div class="hs"><div class="hs-n" data-t="10">0</div><div class="hs-l">Years Excellence</div></div>
+      <div class="hs"><div class="hs-n" data-t="2500">0</div><div class="hs-l">Happy Clients</div></div>
+      <div class="hs"><div class="hs-n" data-t="328">0</div><div class="hs-l">Five Star Reviews</div></div>
+      <div class="hs"><div class="hs-n" data-t="15">0</div><div class="hs-l">Expert Artists</div></div>
+    </div>
+  </div>
+
+  <div class="slide-dots">
+    <div class="sd on" onclick="goSlide(0)"></div>
+    <div class="sd" onclick="goSlide(1)"></div>
+    <div class="sd" onclick="goSlide(2)"></div>
+  </div>
+
+  <div class="scr-ind">
+    <span>Scroll</span>
+    <div class="scr-t"><div class="scr-f"></div></div>
+  </div>
+</section>
+
+<!-- ── LOGO STRIP ── -->
+<div id="logo-banner">
+  <div class="logo-banner-inner">
+    <img src="https://goodlooksalon.in/logo/logo.png" alt="Good Looks Salon" onerror="this.style.display='none'">
+    <div class="logo-divider"></div>
+    <img src="https://goodlooksalon.in/logo/goodlook.png" alt="Good Looks" onerror="this.style.display='none'">
+    <div class="logo-divider"></div>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.4)">Est. 2014 · Janakpuri, New Delhi</span>
+  </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="about-wrap">
+    <div class="about-img-col rl">
+      <img src="https://goodlooksalon.in/about/img.jpeg" alt="Good Looks Salon Studio" class="about-main-img" onerror="this.style.background='linear-gradient(135deg,#1B4332,#0E1512)'">
+      <div class="ac tl"></div><div class="ac tr"></div>
+      <div class="ac bl"></div><div class="ac br"></div>
+      <div class="about-ribbon">
+        <span class="ar-n">10+</span>
+        <span class="ar-s">Years of Excellence</span>
+      </div>
+    </div>
+    <div class="rr">
+      <div class="s-tag">Our Heritage</div>
+      <h2 class="s-head">Defining <em>Beauty</em><br>Standards in Delhi</h2>
+      <p class="about-p">Good Looks Salon is Janakpuri's most trusted <strong>premium beauty destination</strong>. With over a decade of excellence, we have transformed thousands of clients — from everyday elegance to breathtaking <strong>bridal looks</strong>.</p>
+      <p class="about-p">As the finest <strong>Bridal Makeup Artist in Delhi</strong>, our certified artists blend artistry with technique, using only professional-grade products to deliver results that are both stunning and lasting. Our <strong>Hair Styling Services in Delhi</strong> set the benchmark of craft.</p>
+      <div class="about-pills">
+        <div class="pill">Certified Artists</div>
+        <div class="pill">Premium Products</div>
+        <div class="pill">Bridal Specialists</div>
+        <div class="pill">Skin Experts</div>
+        <div class="pill">100% Hygiene</div>
+        <div class="pill">Personal Consultation</div>
+      </div>
+      <button class="btn-gold" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Explore Services ↓</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── HERO GALLERY STRIP ── -->
+<div id="gallery-strip">
+  <img src="https://goodlooksalon.in/heroGallery.png" alt="Good Looks Salon Gallery" class="gs-img" onerror="this.style.display='none'">
+</div>
+
+<!-- ── SERVICES ── -->
+<section id="services">
+  <div class="svc-wrap">
+    <div class="svc-top rv">
+      <div class="s-tag">What We Offer</div>
+      <h2 class="s-head">Curated <em>Services</em></h2>
+      <p style="color:rgba(255,255,255,.4);font-size:14px;font-weight:300;max-width:480px;margin:0 auto">Every service is a bespoke experience designed with precision, care and uncompromising quality.</p>
+    </div>
+    <div class="svc-grid rv">
+      <div class="svc-card" onclick="openModal('bridal')">
+        <div class="svc-num">01</div>
+        <div class="svc-icon">👰</div>
+        <h3>Bridal Makeup</h3>
+        <p>Complete bridal transformations — HD, airbrush & traditional techniques for the most important day of your life.</p>
+        <div class="svc-price">Starting from ₹8,000</div>
+        <button class="svc-link">Discover <span class="arr">→</span></button>
+      </div>
+      <div class="svc-card" onclick="openModal('party')">
+        <div class="svc-num">02</div>
+        <div class="svc-icon">🎉</div>
+        <h3>Party Makeup</h3>
+        <p>Head-turning glamour for birthdays, anniversaries, cocktails & every celebration worth dressing up for.</p>
+        <div class="svc-price">Starting from ₹2,500</div>
+        <button class="svc-link">Discover <span class="arr">→</span></button>
+      </div>
+      <div class="svc-card" onclick="openModal('hair')">
+        <div class="svc-num">03</div>
+        <div class="svc-icon">💇‍♀️</div>
+        <h3>Hair Styling</h3>
+        <p>Expert cuts, blowouts, keratin treatments & editorial styling for all hair types and occasions.</p>
+        <div class="svc-price">Starting from ₹500</div>
+        <button class="svc-link">Discover <span class="arr">→</span></button>
+      </div>
+      <div class="svc-card" onclick="openModal('color')">
+        <div class="svc-num">04</div>
+        <div class="svc-icon">🎨</div>
+        <h3>Hair Coloring</h3>
+        <p>Global color, balayage, highlights, ombre — vibrant, long-lasting professional color services.</p>
+        <div class="svc-price">Starting from ₹1,500</div>
+        <button class="svc-link">Discover <span class="arr">→</span></button>
+      </div>
+      <div class="svc-card" onclick="openModal('skin')">
+        <div class="svc-num">05</div>
+        <div class="svc-icon">✨</div>
+        <h3>Skin Treatments</h3>
+        <p>Advanced facials, hydra treatments, chemical peels & targeted therapies for luminous healthy skin.</p>
+        <div class="svc-price">Starting from ₹1,200</div>
+        <button class="svc-link">Discover <span class="arr">→</span></button>
+      </div>
+      <div class="svc-card" onclick="openModal('groom')">
+        <div class="svc-num">06</div>
+        <div class="svc-icon">🤵</div>
+        <h3>Groom Services</h3>
+        <p>Complete grooming packages — makeup, hair styling & skincare for the distinguished groom.</p>
+        <div class="svc-price">Starting from ₹4,000</div>
+        <button class="svc-link">Discover <span class="arr">→</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PORTFOLIO (Real Photos) ── -->
+<section id="portfolio">
+  <div class="port-wrap">
+    <div class="port-top rv">
+      <div>
+        <div class="s-tag">Our Artistry</div>
+        <h2 class="s-head">The <em>Portfolio</em></h2>
+      </div>
+      <div class="port-filters">
+        <button class="pf-btn on" onclick="pfilt('all',this)">All</button>
+        <button class="pf-btn" onclick="pfilt('bridal',this)">Bridal</button>
+        <button class="pf-btn" onclick="pfilt('hair',this)">Hair</button>
+        <button class="pf-btn" onclick="pfilt('skin',this)">Skin</button>
+        <button class="pf-btn" onclick="pfilt('party',this)">Party</button>
+      </div>
+    </div>
+    <div class="port-grid rv">
+      <!-- Real images from goodlooksalon.in with multiple fallback paths -->
+      <div class="port-item" data-c="bridal">
+        <img src="https://goodlooksalon.in/assets/img5.jpeg" alt="Bridal Makeup" class="port-img" onerror="this.src='https://goodlooksalon.in/portfolio/bridal1.jpeg';this.onerror=null">
+        <div class="port-ov"><h4>Royal Bridal Look</h4><span>Bridal Makeup</span></div>
+      </div>
+      <div class="port-item" data-c="hair">
+        <img src="https://goodlooksalon.in/assets/img6.jpeg" alt="Hair Styling" class="port-img" onerror="this.src='https://goodlooksalon.in/portfolio/hair1.jpeg';this.onerror=null">
+        <div class="port-ov"><h4>Glamour Waves</h4><span>Hair Styling</span></div>
+      </div>
+      <div class="port-item" data-c="party">
+        <img src="https://goodlooksalon.in/about/img.jpeg" alt="Party Makeup" class="port-img" onerror="this.src='https://goodlooksalon.in/portfolio/party1.jpeg';this.onerror=null">
+        <div class="port-ov"><h4>Evening Glam</h4><span>Party Makeup</span></div>
+      </div>
+      <div class="port-item" data-c="skin">
+        <img src="https://goodlooksalon.in/assets/img5.jpeg" alt="Skin Treatment" class="port-img" style="object-position:top" onerror="this.src='https://goodlooksalon.in/portfolio/skin1.jpeg';this.onerror=null">
+        <div class="port-ov"><h4>Glass Skin Treatment</h4><span>Skin Care</span></div>
+      </div>
+      <div class="port-item" data-c="bridal">
+        <img src="https://goodlooksalon.in/assets/img6.jpeg" alt="Bridal Makeup" class="port-img" style="object-position:top" onerror="this.src='https://goodlooksalon.in/portfolio/bridal2.jpeg';this.onerror=null">
+        <div class="port-ov"><h4>Mehendi Ceremony Look</h4><span>Bridal Makeup</span></div>
+      </div>
+      <div class="port-item" data-c="hair">
+        <img src="https://goodlooksalon.in/about/img.jpeg" alt="Hair Color" class="port-img" style="object-position:top" onerror="this.src='https://goodlooksalon.in/portfolio/hair2.jpeg';this.onerror=null">
+        <div class="port-ov"><h4>Balayage Dream</h4><span>Hair Coloring</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REELS / VIDEOS ── -->
+<section id="reels">
+  <div class="reels-wrap">
+    <div class="reels-top rv">
+      <div class="s-tag">Behind the Magic</div>
+      <h2 class="s-head">Watch Our <em>Reels</em></h2>
+      <p style="color:rgba(255,255,255,.4);font-size:14px;font-weight:300;max-width:480px;margin:0 auto">See real transformations, tutorials and salon moments from our team.</p>
+    </div>
+    <div class="reels-grid rv">
+      <!-- Reel 1 -->
+      <div class="reel-item" onclick="playReel(this)">
+        <video id="rv1" loop muted playsinline preload="metadata"
+          poster="https://goodlooksalon.in/assets/img5.jpeg">
+          <source src="https://goodlooksalon.in/reels/reel1.mp4" type="video/mp4">
+          <source src="https://goodlooksalon.in/videos/reel1.mp4" type="video/mp4">
+        </video>
+        <div class="reel-play">
+          <button class="rp-btn" aria-label="Play">▶</button>
+        </div>
+        <div class="reel-label">Bridal Transformation</div>
+      </div>
+      <!-- Reel 2 -->
+      <div class="reel-item" onclick="playReel(this)">
+        <video id="rv2" loop muted playsinline preload="metadata"
+          poster="https://goodlooksalon.in/assets/img6.jpeg">
+          <source src="https://goodlooksalon.in/reels/reel2.mp4" type="video/mp4">
+          <source src="https://goodlooksalon.in/videos/reel2.mp4" type="video/mp4">
+        </video>
+        <div class="reel-play">
+          <button class="rp-btn" aria-label="Play">▶</button>
+        </div>
+        <div class="reel-label">Hair Styling Magic</div>
+      </div>
+      <!-- Reel 3 -->
+      <div class="reel-item" onclick="playReel(this)">
+        <video id="rv3" loop muted playsinline preload="metadata"
+          poster="https://goodlooksalon.in/about/img.jpeg">
+          <source src="https://goodlooksalon.in/reels/reel3.mp4" type="video/mp4">
+          <source src="https://goodlooksalon.in/videos/reel3.mp4" type="video/mp4">
+        </video>
+        <div class="reel-play">
+          <button class="rp-btn" aria-label="Play">▶</button>
+        </div>
+        <div class="reel-label">Skin Glow Treatments</div>
+      </div>
+      <!-- Reel 4 -->
+      <div class="reel-item" onclick="playReel(this)">
+        <video id="rv4" loop muted playsinline preload="metadata"
+          poster="https://goodlooksalon.in/assets/img5.jpeg">
+          <source src="https://goodlooksalon.in/reels/reel4.mp4" type="video/mp4">
+          <source src="https://goodlooksalon.in/videos/reel4.mp4" type="video/mp4">
+        </video>
+        <div class="reel-play">
+          <button class="rp-btn" aria-label="Play">▶</button>
+        </div>
+        <div class="reel-label">Party Glam Looks</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FULL GALLERY MOSAIC ── -->
+<section id="gallery-full">
+  <div class="gf-wrap">
+    <div class="gf-top rv">
+      <div class="s-tag">Studio Gallery</div>
+      <h2 class="s-head">Our <em>Work</em> in Detail</h2>
+    </div>
+    <div class="gf-mosaic rv">
+      <div class="gf-item big">
+        <img src="https://goodlooksalon.in/heroGallery.png" alt="Good Looks Gallery" onerror="this.style.background='linear-gradient(135deg,#1B4332,#0E1512)'">
+        <div class="gf-overlay"></div>
+      </div>
+      <div class="gf-item">
+        <img src="https://goodlooksalon.in/assets/img5.jpeg" alt="Bridal Look" onerror="this.style.background='#0E1512'">
+        <div class="gf-overlay"></div>
+      </div>
+      <div class="gf-item">
+        <img src="https://goodlooksalon.in/assets/img6.jpeg" alt="Hair Styling" onerror="this.style.background='#1B4332'">
+        <div class="gf-overlay"></div>
+      </div>
+      <div class="gf-item tall">
+        <img src="https://goodlooksalon.in/about/img.jpeg" alt="Salon Studio" onerror="this.style.background='#0C0F0E'">
+        <div class="gf-overlay"></div>
+      </div>
+      <div class="gf-item">
+        <img src="https://goodlooksalon.in/assets/img5.jpeg" alt="Makeup Art" style="object-position:top" onerror="this.style.background='#1B4332'">
+        <div class="gf-overlay"></div>
+      </div>
+      <div class="gf-item">
+        <img src="https://goodlooksalon.in/assets/img6.jpeg" alt="Hair Color" style="object-position:bottom" onerror="this.style.background='#0E1512'">
+        <div class="gf-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section id="testimonials">
+  <div class="test-wrap">
+    <div class="test-top rv">
+      <div class="s-tag">Client Stories</div>
+      <h2 class="s-head">Words of <em>Praise</em></h2>
+    </div>
+    <div class="test-layout">
+      <div class="rv">
+        <div class="t-big">4.9</div>
+        <div class="t-stars">★★★★★</div>
+        <div class="t-total">328 Verified Reviews</div>
+        <div class="t-bars">
+          <div class="t-bar-row"><span class="tbl">5★</span><div class="tbt"><div class="tbf" style="width:92%"></div></div><span class="tbc">301</span></div>
+          <div class="t-bar-row"><span class="tbl">4★</span><div class="tbt"><div class="tbf" style="width:6%"></div></div><span class="tbc">20</span></div>
+          <div class="t-bar-row"><span class="tbl">3★</span><div class="tbt"><div class="tbf" style="width:1%"></div></div><span class="tbc">5</span></div>
+          <div class="t-bar-row"><span class="tbl">2★</span><div class="tbt"><div class="tbf" style="width:1%"></div></div><span class="tbc">2</span></div>
+          <div class="t-bar-row"><span class="tbl">1★</span><div class="tbt"><div class="tbf" style="width:0%"></div></div><span class="tbc">0</span></div>
+        </div>
+      </div>
+      <div class="rv" style="position:relative">
+        <div class="test-card on">
+          <div class="tq">"</div>
+          <div class="tc-body">
+            <p class="tc-text">My bridal look was absolutely breathtaking. The team understood exactly what I envisioned and created pure magic. Every single guest was complimenting my makeup throughout the evening!</p>
+            <div class="tc-author">
+              <div class="tc-av-em">👩</div>
+              <div><div class="tc-name">Priya Sharma</div><div class="tc-role">Bride — December 2025</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="tq">"</div>
+          <div class="tc-body">
+            <p class="tc-text">Best salon experience in Delhi. My balayage looks incredible — better than anything I've seen on Instagram. The precision and attention to detail is extraordinary. Never going anywhere else.</p>
+            <div class="tc-author">
+              <div class="tc-av-em">👱‍♀️</div>
+              <div><div class="tc-name">Ananya Gupta</div><div class="tc-role">Regular Client</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="tq">"</div>
+          <div class="tc-body">
+            <p class="tc-text">I came in for a party look and left feeling completely transformed. The hydra facial before the makeup made such a visible difference — my skin was literally glowing. Highly recommended!</p>
+            <div class="tc-author">
+              <div class="tc-av-em">🧕</div>
+              <div><div class="tc-name">Ritu Malhotra</div><div class="tc-role">Client Since 2023</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="tq">"</div>
+          <div class="tc-body">
+            <p class="tc-text">Even the groom services exceeded all expectations. My husband looked incredibly handsome. The team is professional, warm and genuinely talented. Five stars isn't enough!</p>
+            <div class="tc-author">
+              <div class="tc-av-em">👰</div>
+              <div><div class="tc-name">Deepika Singh</div><div class="tc-role">Bride — October 2025</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="test-nav">
+          <button class="tn" onclick="prevT()">←</button>
+          <button class="tn" onclick="nextT()">→</button>
+        </div>
+        <div class="t-dots">
+          <div class="tdot on" onclick="goT(0)"></div>
+          <div class="tdot" onclick="goT(1)"></div>
+          <div class="tdot" onclick="goT(2)"></div>
+          <div class="tdot" onclick="goT(3)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── OFFERS ── -->
+<section id="offers">
+  <div class="offers-wrap">
+    <div class="offers-top rv">
+      <div class="s-tag">Limited Time</div>
+      <h2 class="s-head">Exclusive <em>Offers</em></h2>
+    </div>
+    <div class="offers-grid">
+      <div class="offer-big rv">
+        <div class="ob">🔥 Most Popular</div>
+        <div class="od">30%</div>
+        <h3>Complete Bridal Package</h3>
+        <p>Full bridal makeup, hairstyling, pre-bridal skin treatment & mehendi consultation — the ultimate wedding package at an unbeatable price.</p>
+        <div class="timer-row">
+          <div class="tu"><span class="tn-n" id="d1">02</span><span class="tn-l">Days</span></div>
+          <div class="tu"><span class="tn-n" id="h1">14</span><span class="tn-l">Hours</span></div>
+          <div class="tu"><span class="tn-n" id="m1">37</span><span class="tn-l">Mins</span></div>
+          <div class="tu"><span class="tn-n" id="s1">00</span><span class="tn-l">Secs</span></div>
+        </div>
+        <button class="btn-gold" onclick="gotoContact()">✦ Claim This Offer</button>
+      </div>
+      <div class="offer-side">
+        <div class="offer-sm rv" style="transition-delay:.1s">
+          <div class="ob">✨ New Client</div>
+          <div class="od">₹500</div>
+          <h3>First Visit Discount</h3>
+          <p>New to Good Looks? Enjoy ₹500 off your first service above ₹1,500. Use code <strong style="color:var(--gold)">NEWLOOKS</strong></p>
+          <button class="btn-gold" onclick="gotoContact()">Book First Visit</button>
+        </div>
+        <div class="offer-sm rv" style="transition-delay:.2s">
+          <div class="ob">💎 Membership</div>
+          <div class="od">20%</div>
+          <h3>Monthly Glow Club</h3>
+          <p>20% off all services, priority booking & complimentary treatments. Starting at ₹999/month.</p>
+          <button class="btn-gold" onclick="gotoContact()">Join the Club</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BLOG ── -->
+<section id="blog">
+  <div class="blog-wrap">
+    <div class="blog-top rv">
+      <div class="s-tag">Beauty Journal</div>
+      <h2 class="s-head">Insights & <em>Inspiration</em></h2>
+    </div>
+    <div class="blog-grid rv">
+      <div class="blog-card">
+        <div class="blog-img-wrap">
+          <img src="https://goodlooksalon.in/assets/img5.jpeg" alt="Bridal Makeup Trends">
+          <div class="blog-img-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat">Bridal Makeup</div>
+          <h3>Bridal Makeup Trends in Delhi 2026 — What's In This Season</h3>
+          <p>From soft glam to bold editorial looks, discover what brides in Delhi are choosing for their most important day.</p>
+          <div class="blog-foot"><span>Jan 15, 2026</span><span>5 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img-wrap">
+          <img src="https://goodlooksalon.in/assets/img6.jpeg" alt="Hair Care Tips">
+          <div class="blog-img-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat">Hair Care</div>
+          <h3>Complete Hair Care Guide for Indian Weather — Monsoon to Winter</h3>
+          <p>Expert tips from our stylists on maintaining healthy, lustrous hair through every demanding season.</p>
+          <div class="blog-foot"><span>Feb 3, 2026</span><span>7 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img-wrap">
+          <img src="https://goodlooksalon.in/about/img.jpeg" alt="Pre-Bridal Skincare">
+          <div class="blog-img-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat">Skin Care</div>
+          <h3>The Ultimate Pre-Bridal Skincare Routine — 3 Months to Glowing Skin</h3>
+          <p>Start your skin preparation early with this comprehensive timeline crafted by our skincare specialists.</p>
+          <div class="blog-foot"><span>Feb 18, 2026</span><span>8 min read</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="contact-wrap">
+    <div class="contact-top rv">
+      <div class="s-tag">Reach Us</div>
+      <h2 class="s-head">Book Your <em>Appointment</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="rl">
+        <div class="c-info">
+          <div class="c-icon">📍</div>
+          <div><h4>Our Studio</h4><p>79A, Block C4G, Janakpuri<br>New Delhi – 110058</p></div>
+        </div>
+        <div class="c-info">
+          <div class="c-icon">📞</div>
+          <div><h4>Phone</h4><p>+91 91362 05669</p></div>
+        </div>
+        <div class="c-info">
+          <div class="c-icon">⏰</div>
+          <div><h4>Hours</h4><p>Monday — Sunday<br>9:00 AM to 8:00 PM</p></div>
+        </div>
+        <div class="c-btns">
+          <a href="tel:+919136205669" class="c-call">📞 Call Now</a>
+          <a href="https://wa.me/919136205669" target="_blank" class="c-wa">💬 WhatsApp</a>
+        </div>
+        <div class="map-box">
+          <span style="font-size:28px">📍</span>
+          <p>79A Block C4G, Janakpuri, New Delhi 110058</p>
+          <a href="https://maps.google.com/?q=Good+Looks+Salon+Janakpuri+New+Delhi" target="_blank">Open in Google Maps →</a>
+        </div>
+      </div>
+      <div class="rr">
+        <div class="f-grp"><label class="f-lbl">Full Name</label><input type="text" class="f-in" placeholder="Your full name"></div>
+        <div class="f-row">
+          <div class="f-grp"><label class="f-lbl">Phone</label><input type="tel" class="f-in" placeholder="+91 91362 05669"></div>
+          <div class="f-grp"><label class="f-lbl">Email</label><input type="email" class="f-in" placeholder="your@email.com"></div>
+        </div>
+        <div class="f-grp">
+          <label class="f-lbl">Select Service</label>
+          <select class="f-sel f-in">
+            <option value="">Choose a service...</option>
+            <option>Bridal Makeup</option>
+            <option>Party Makeup</option>
+            <option>Hair Styling</option>
+            <option>Hair Coloring</option>
+            <option>Skin Treatment</option>
+            <option>Groom Services</option>
+            <option>Membership Inquiry</option>
+          </select>
+        </div>
+        <div class="f-row">
+          <div class="f-grp"><label class="f-lbl">Preferred Date</label><input type="date" class="f-in"></div>
+          <div class="f-grp">
+            <label class="f-lbl">Time Slot</label>
+            <select class="f-sel f-in">
+              <option>9:00 AM</option><option>11:00 AM</option>
+              <option>1:00 PM</option><option>3:00 PM</option><option>5:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="f-grp"><label class="f-lbl">Special Requests</label><textarea class="f-ta" placeholder="Any occasion details or specific requirements..."></textarea></div>
+        <button class="btn-gold" style="width:100%;display:flex;align-items:center;justify-content:center;gap:10px" onclick="submitF(this)">✦ Confirm Booking</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="ft-inner">
+
+      <!-- ── FULL SOCIAL MEDIA SECTION ── -->
+      <div class="ft-social-section">
+        <div class="ft-social-title">Connect With Us</div>
+        <div class="ft-social-cards">
+          <a href="https://wa.me/919136205669" target="_blank" class="ft-soc-card ft-soc-wa" title="WhatsApp">
+            <div class="ft-soc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+            <span class="ft-soc-name">WhatsApp</span>
+            <span class="ft-soc-handle">+91 91362 05669</span>
+          </a>
+          <a href="https://www.instagram.com/goodlookssalon" target="_blank" class="ft-soc-card ft-soc-ig" title="Instagram">
+            <div class="ft-soc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+            <span class="ft-soc-name">Instagram</span>
+            <span class="ft-soc-handle">@goodlookssalon</span>
+          </a>
+          <a href="https://www.facebook.com/goodlookssalon" target="_blank" class="ft-soc-card ft-soc-fb" title="Facebook">
+            <div class="ft-soc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div>
+            <span class="ft-soc-name">Facebook</span>
+            <span class="ft-soc-handle">@goodlookssalon</span>
+          </a>
+          <a href="https://www.youtube.com/@goodlookssalon" target="_blank" class="ft-soc-card ft-soc-yt" title="YouTube">
+            <div class="ft-soc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></div>
+            <span class="ft-soc-name">YouTube</span>
+            <span class="ft-soc-handle">@goodlookssalon</span>
+          </a>
+          <a href="https://www.tiktok.com/@goodlookssalon" target="_blank" class="ft-soc-card ft-soc-tt" title="TikTok">
+            <div class="ft-soc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></div>
+            <span class="ft-soc-name">TikTok</span>
+            <span class="ft-soc-handle">@goodlookssalon</span>
+          </a>
+          <a href="https://www.pinterest.com/goodlookssalon" target="_blank" class="ft-soc-card ft-soc-pin" title="Pinterest">
+            <div class="ft-soc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></div>
+            <span class="ft-soc-name">Pinterest</span>
+            <span class="ft-soc-handle">@goodlookssalon</span>
+          </a>
+        </div>
+      </div>
+    <div class="ft-top">
+      <div class="ft-brand">
+        <img src="https://goodlooksalon.in/logo/logo.png" alt="Good Looks Salon" class="ft-logo-img" onerror="this.style.display='none'">
+        <img src="https://goodlooksalon.in/logo/goodlook.png" alt="Good Looks" class="ft-logo-img" onerror="this.style.display='none'">
+        <div class="ft-logo-text" id="ftLogoFallback">Good Looks</div>
+        <p>Janakpuri's premier beauty destination. Crafting transformative experiences with artistry, precision and the finest professional products since 2014.</p>
+        <div class="ft-soc">
+          <a href="https://wa.me/919136205669" target="_blank" class="soc soc-wa" title="WhatsApp"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          <a href="https://www.instagram.com/goodlookssalon" target="_blank" class="soc soc-ig" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://www.facebook.com/goodlookssalon" target="_blank" class="soc soc-fb" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.youtube.com/@goodlookssalon" target="_blank" class="soc soc-yt" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+          <a href="https://www.tiktok.com/@goodlookssalon" target="_blank" class="soc soc-tt" title="TikTok"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.pinterest.com/goodlookssalon" target="_blank" class="soc soc-pin" title="Pinterest"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Services</h4>
+        <ul class="ft-links">
+          <li><a href="#">Bridal Makeup</a></li>
+          <li><a href="#">Party Makeup</a></li>
+          <li><a href="#">Hair Styling</a></li>
+          <li><a href="#">Hair Coloring</a></li>
+          <li><a href="#">Skin Treatments</a></li>
+          <li><a href="#">Groom Services</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Navigate</h4>
+        <ul class="ft-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#reels">Reels</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Legal</h4>
+        <ul class="ft-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Booking Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="https://goodlooksalon.in/sitemap.xml">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>© 2026 Good Looks Salon. All rights reserved. | 79A Block C4G, Janakpuri, New Delhi – 110058</span>
+      <span>Powered by <a href="https://asccentify-studio.com/" target="_blank">Asccentify Studio</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky Mobile CTA -->
+<div class="sticky">
+  <a href="tel:+919136205669" class="c-call" style="flex:1;justify-content:center">📞 Call</a>
+  <a href="https://wa.me/919136205669" target="_blank" class="c-wa" style="flex:1;justify-content:center">💬 WhatsApp</a>
+  <button class="btn-gold" style="flex:1;justify-content:center" onclick="gotoContact()">Book Now</button>
+</div>
+
+<!-- Service Modal -->
+<div class="m-bg" id="mBg">
+  <div class="m-box">
+    <button class="mcl" onclick="closeModal()">✕</button>
+    <div class="m-icon" id="mIcon"></div>
+    <h2 id="mTitle"></h2>
+    <div class="m-meta"><span id="mDur"></span><span id="mPr"></span></div>
+    <p id="mDesc"></p>
+    <button class="btn-gold" style="width:100%;display:flex;justify-content:center" onclick="closeModal();gotoContact()">✦ Book This Service</button>
+  </div>
+</div>
+
+
+
+<script>
+// ── Cursor
+const cur=document.getElementById('cur'),ring=document.getElementById('curRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX;my=e.clientY;
+  cur.style.transform=`translate(${mx-5}px,${my-5}px)`;
+});
+(function a(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.transform=`translate(${rx-17}px,${ry-17}px)`;requestAnimationFrame(a)})();
+document.querySelectorAll('button,a,.svc-card,.port-item,.blog-card,.pf-btn,.offer-sm,.tdot,.tn,.reel-item,.gf-item').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ring.style.opacity='.2';ring.style.transform+=' scale(2.5)'});
+  el.addEventListener('mouseleave',()=>{ring.style.opacity='1'});
+});
+
+// ── Handle logo image loading
+document.querySelectorAll('.logo-img').forEach(img=>{
+  img.addEventListener('load',()=>{document.getElementById('logoFallback').style.display='none'});
+  img.addEventListener('error',()=>{document.getElementById('logoFallback').style.display='block'});
+});
+
+// ── Nav scroll
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sc',scrollY>60));
+
+// ── Particles
+const cv=document.getElementById('pc'),cx=cv.getContext('2d');
+function rs(){cv.width=innerWidth;cv.height=innerHeight}rs();
+window.addEventListener('resize',rs);
+const pts=Array.from({length:60},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.4+.3,dx:(Math.random()-.5)*.2,dy:(Math.random()-.5)*.2,o:Math.random()*.4+.08}));
+(function d(){cx.clearRect(0,0,cv.width,cv.height);pts.forEach(p=>{cx.beginPath();cx.arc(p.x,p.y,p.r,0,Math.PI*2);cx.fillStyle=`rgba(201,168,76,${p.o})`;cx.fill();p.x+=p.dx;p.y+=p.dy;if(p.x<0||p.x>cv.width)p.dx*=-1;if(p.y<0||p.y>cv.height)p.dy*=-1});requestAnimationFrame(d)})();
+
+// ── Hero slideshow
+let sc=0;const slides=document.querySelectorAll('.hero-slide'),dots=document.querySelectorAll('.sd');
+window.goSlide=function(i){slides[sc].classList.remove('on');dots[sc].classList.remove('on');sc=i;slides[sc].classList.add('on');dots[sc].classList.add('on')};
+setInterval(()=>goSlide((sc+1)%slides.length),5000);
+
+// ── Stats counter
+function counter(el,t,suf=''){
+  let c=0,step=t/60;
+  const iv=setInterval(()=>{c+=step;if(c>=t){c=t;clearInterval(iv)}el.textContent=Math.floor(c).toLocaleString()+suf},30);
+}
+const obs1=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.hs-n').forEach(el=>{const t=parseInt(el.dataset.t);counter(el,t,t<=15?'+':'')});obs1.disconnect()}})},{threshold:.3});
+const hst=document.querySelector('.h-stats');if(hst)obs1.observe(hst);
+
+// ── Scroll reveal
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('vis'),100)})},{threshold:.08});
+document.querySelectorAll('.rv,.rl,.rr').forEach(el=>ro.observe(el));
+
+// ── Testimonials
+let tc=0;
+const tcards=document.querySelectorAll('.test-card'),tdots=document.querySelectorAll('.tdot');
+function goT(i){tcards[tc].classList.remove('on');tdots[tc].classList.remove('on');tc=i;tcards[tc].classList.add('on');tdots[tc].classList.add('on')}
+window.goT=goT;window.nextT=()=>goT((tc+1)%4);window.prevT=()=>goT((tc+3)%4);
+setInterval(()=>nextT(),4500);
+
+// ── Portfolio filter
+window.pfilt=function(cat,btn){
+  document.querySelectorAll('.pf-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');
+  document.querySelectorAll('.port-item').forEach(it=>{const s=cat==='all'||it.dataset.c===cat;it.style.opacity=s?'1':'.15';it.style.transform=s?'':'scale(.97)';it.style.transition='all .4s'});
+};
+
+// ── Reels play
+window.playReel=function(item){
+  const vid=item.querySelector('video'),overlay=item.querySelector('.reel-play');
+  if(vid.paused){
+    document.querySelectorAll('.reel-item video').forEach(v=>{if(v!==vid){v.pause();v.closest('.reel-item').querySelector('.reel-play').style.display='flex'}});
+    vid.play();overlay.style.display='none';
+  }else{vid.pause();overlay.style.display='flex';}
+};
+
+// ── Countdown
+const end=Date.now()+2*86400000+14*3600000+37*60000;
+function tick(){const diff=Math.max(0,end-Date.now()),f=n=>String(Math.floor(n)).padStart(2,'0');
+  document.getElementById('d1').textContent=f(diff/86400000);
+  document.getElementById('h1').textContent=f(diff%86400000/3600000);
+  document.getElementById('m1').textContent=f(diff%3600000/60000);
+  document.getElementById('s1').textContent=f(diff%60000/1000);
+}
+tick();setInterval(tick,1000);
+
+// ── Modal
+const md={
+  bridal:{icon:'👰',title:'Bridal Makeup',dur:'3–5 Hours',price:'From ₹8,000',desc:'A transformative bridal experience crafted to make you look and feel your absolute best. Includes pre-bridal consultation, HD & airbrush options, long-lasting professional formula, touch-up kit, and a flawless finish that photographs beautifully.'},
+  party:{icon:'🎉',title:'Party Makeup',dur:'1–2 Hours',price:'From ₹2,500',desc:'Glamorous, head-turning looks for every celebration. Birthday, anniversary, cocktail night or family function — our artists create stunning looks tailored to your outfit, skin tone and occasion.'},
+  hair:{icon:'💇‍♀️',title:'Hair Styling',dur:'1–3 Hours',price:'From ₹500',desc:'Expert haircuts, blowouts, braids, updos and keratin smoothening treatments. Our certified stylists work with all hair types and textures to give you your dream hair.'},
+  color:{icon:'🎨',title:'Hair Coloring',dur:'2–4 Hours',price:'From ₹1,500',desc:'From global color to advanced balayage, ombre, highlights and fashion shades — our colorists create vibrant, dimensional, long-lasting results using professional products that nourish while they color.'},
+  skin:{icon:'✨',title:'Skin Treatments',dur:'1–2 Hours',price:'From ₹1,200',desc:'Advanced facials, hydra facials, chemical peels, de-tan treatments and targeted skincare. Our experts analyze your unique skin and customize treatments for maximum glow and radiant, luminous results.'},
+  groom:{icon:'🤵',title:'Groom Services',dur:'2–3 Hours',price:'From ₹4,000',desc:'Complete grooming packages designed for grooms — natural makeup, hair styling, beard grooming and skin prep. Our packages are tailored to perfectly complement the bridal look.'}
+};
+window.openModal=function(id){const d=md[id];if(!d)return;
+  document.getElementById('mIcon').textContent=d.icon;document.getElementById('mTitle').textContent=d.title;
+  document.getElementById('mDur').textContent='⏱ '+d.dur;document.getElementById('mPr').textContent='💰 '+d.price;
+  document.getElementById('mDesc').textContent=d.desc;document.getElementById('mBg').classList.add('open');
+};
+window.closeModal=()=>document.getElementById('mBg').classList.remove('open');
+document.getElementById('mBg').addEventListener('click',function(e){if(e.target===this)closeModal()});
+
+
+
+// ── Helpers
+window.gotoContact=()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+window.submitF=function(btn){btn.textContent='✓ Booking Confirmed!';btn.style.background='linear-gradient(135deg,#2ecc71,#27ae60)';setTimeout(()=>{btn.textContent='✦ Confirm Booking';btn.style.background=''},3500)};
+</script>
+</body>
+</html>
